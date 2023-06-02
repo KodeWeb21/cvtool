@@ -1,0 +1,128 @@
+:root{
+    --header-bg: #00B4D8;
+    --color: white;
+    --footer-color: #3B4247;
+    --section-bg: #EDEDE9;
+}
+
+body{
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.header{
+    background-color: var(--header-bg);
+    margin-bottom: 0;
+}
+
+.icon{
+    display: block;
+    padding: 10px 15px;
+}
+
+.primarysection{
+    background-color: var(--section-bg);
+}
+
+.primarysection,
+.footer{
+    padding: 10px 15px;
+}
+
+.title{
+    margin-top: 0;
+    text-align: center;
+}
+
+.btn-primary{
+    background-color: var(--header-bg);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border: 0;
+    padding: 15px 20px;
+    display: block;
+    width: 100%;
+    font-family: inherit;
+    margin: 20px 0;
+}
+
+
+.containerImg{
+    text-align: center;
+}
+
+
+.containerTemplate{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.template{
+    flex-grow: 1;
+}
+
+.template__img{
+    width: 100%;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.right{
+    transform: rotate(180deg);
+}
+
+.btnrow{
+   background-color: inherit;
+    border: 0;
+    cursor: pointer;
+}
+
+.btnrow__icon{
+    width: 30px;
+}
+
+.listUse{
+    list-style: none;
+    padding: 0;
+}
+
+.listUse__item{
+    text-align: center;
+}
+
+.titleUse{
+    border: 3px solid var(--header-bg);
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    display:inline-block;
+    font-size: 1.4rem;
+    border-radius: 50%;
+}
+
+.primarysection--more{
+    margin-top: 30px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+
+.footer{
+    background-color: var(--footer-color);
+}
+
+.footer, .link{
+    color: white;
+}
+
+.link{
+    text-decoration: none;
+}
+
+.containerLinks{
+    list-style: none;
+    padding: 0;
+}
