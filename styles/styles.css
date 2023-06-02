@@ -43,7 +43,8 @@ body{
     border: 0;
     padding: 15px 20px;
     display: block;
-    width: 100%;
+    text-align: center;
+    text-decoration: none;
     font-family: inherit;
     margin: 20px 0;
 }
