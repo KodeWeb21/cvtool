@@ -1,0 +1,112 @@
+:root{
+    --header-bg: #00B4D8;
+    --color: white;
+    --section-bg: #EDEDE9;
+}
+
+
+body{
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header{
+    background-color: var(--section-bg);
+    display: flex;
+    justify-content: space-between;
+}
+
+.skills,
+.header{
+    padding: 10px 15px;
+}
+
+.left{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-home{
+    display: grid;
+}
+
+
+
+.skills__list{
+    padding: 0;
+    list-style: none;
+}
+
+.skills__header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.skills__title{
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.skills__item{
+    border: 1px solid #3333;
+    border-radius: 3px;
+    padding: .4rem;
+    margin: 15px 0;
+}
+
+.btn-desc{
+    background-color: inherit;
+    border: 0;
+}
+
+.label{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+    gap: 3px;
+}
+
+.input{
+    padding: .5rem;
+}
+
+.containerBtns{
+    text-align: right;
+}
+
+.btn-form{
+    padding: .5rem .8rem;
+    border: 0;
+    border-radius: 3px;
+}
+
+.btn-saved{
+    background-color: var(--header-bg);
+    color: white;
+    font-weight: bold;
+}
+
+.flex{
+    display: flex;
+    gap: 5px;
+}
+
+.input-flex{
+    flex-grow: 1;
+}
+
+@media screen and (min-width:640px){
+    .rows{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .main{
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}
