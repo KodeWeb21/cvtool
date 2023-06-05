@@ -98,6 +98,19 @@ body{
     flex-grow: 1;
 }
 
+.hidden{
+    display: none;
+}
+
+.btn-icon{
+    transition: transform .3s ease;
+}
+
+.activeSkill .btn-icon{
+    transform: rotate(180deg);
+}
+
+
 @media screen and (min-width:640px){
     .rows{
         display: grid;
