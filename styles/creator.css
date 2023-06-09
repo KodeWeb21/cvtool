@@ -16,17 +16,20 @@ body{
     justify-content: space-between;
 }
 
-.skills{
-    width: 600px;
-}
-
 .columns{
     display: flex;
 }
 
 .skills,
-.header{
+.header,
+.containerCv{
     padding: 10px 15px;
+}
+
+.skills,
+.containerCv{
+    height: 90vh;
+    overflow-y: scroll;
 }
 
 .left{
@@ -127,6 +130,7 @@ body{
 }
 
 .containerCv{
+    flex-grow: 1;
     max-width: 880px;
     margin: 0 auto;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -163,8 +167,6 @@ body{
 .icon{
     width: 30px;
     height: 30px;
-    border-radius: 50%;
-    background-color: #007D94;
 }
 
 .related__item{
@@ -178,7 +180,7 @@ body{
     margin: 5px 0;
 }
 
-.footer{
+.footerCv{
     display: flex;
     gap: 15px;
 }
@@ -209,8 +211,5 @@ body{
         gap: 10px;
     }
 
-    .main{
-        max-width: 800px;
-        margin: 0 auto;
-    }
+  
 }
