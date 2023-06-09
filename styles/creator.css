@@ -16,6 +16,14 @@ body{
     justify-content: space-between;
 }
 
+.skills{
+    width: 600px;
+}
+
+.columns{
+    display: flex;
+}
+
 .skills,
 .header{
     padding: 10px 15px;
@@ -70,7 +78,7 @@ body{
 }
 
 .input{
-    padding: .5rem;
+    padding: .5rem .2rem;
 }
 
 .containerBtns{
@@ -108,6 +116,89 @@ body{
 
 .activeSkill .btn-icon{
     transform: rotate(180deg);
+}
+
+/**** CV ESTILOS ***/
+
+.headerCv{
+    display: flex;
+    align-items: flex-end;
+    gap: 15px;
+}
+
+.containerCv{
+    max-width: 880px;
+    margin: 0 auto;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.imgCv{
+    width: 250px;
+    background-color: #007D94;;
+    line-height: 0;
+}
+
+.imgCv img{
+    max-width: 100%;
+}
+
+.name{
+    margin: 0;
+    font-size: 60px;
+}
+
+.sections{
+    display: flex;
+}
+
+.related{
+    min-width: 250px;
+}
+
+.related__list{
+    list-style: none;
+    padding: 0;
+}
+
+.icon{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #007D94;
+}
+
+.related__item{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.section__header h3{
+    margin: 5px 0;
+}
+
+.footer{
+    display: flex;
+    gap: 15px;
+}
+
+.languages ul,
+.more ul,
+.section__list{
+    list-style: none;
+    padding: 0;
+}
+.languages li{
+    margin: 10px 0;
+}
+
+.languages span{
+    display: block;
+}
+
+.languages span:nth-child(1){
+    font-weight: bold;
 }
 
 
