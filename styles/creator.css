@@ -134,6 +134,7 @@ body{
     max-width: 880px;
     margin: 0 auto;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: none;
 }
 
 .imgCv{
@@ -204,6 +205,10 @@ body{
 }
 
 
+.main{
+    flex-grow: 1;
+}
+
 @media screen and (min-width:640px){
     .rows{
         display: grid;
@@ -212,4 +217,10 @@ body{
     }
 
   
+}
+
+@media screen and (min-width:1024px){
+    .containerCv{
+        display: block;
+    }
 }
