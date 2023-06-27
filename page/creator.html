@@ -42,14 +42,6 @@
                                 <input type="text" class="input" data-name="direccion">
                             </label>
                             
-                            <div class="rows">
-                                <label class="label">Codigo postal
-                                    <input type="text" class="input">
-                                </label>
-                                <label class="label">Localidad
-                                    <input type="text" class="input">
-                                </label>
-                            </div>
                         </form>
                    </li>
                    <li class="skills__item activeSkill">
@@ -76,52 +68,6 @@
                                     </label>
                                 </div>
     
-                                <div class="rows">
-                                    <label for="" class="label">
-                                        Fecha de inicio
-                                        <div class="flex">
-                                            <select name="select" class="input">
-                                                <option value="Mes" selected>Mes</option>
-                                                <option value="enero">Enero</option>
-                                                <option value="febrero">Febrero</option>
-                                                <option value="marzo">Marzo</option>
-                                                <option value="abril">Abril</option>
-                                                <option value="mayo">Mayo</option>
-                                                <option value="junio">Junio</option>
-                                                <option value="julio">Julio</option>
-                                                <option value="agosto">Agosto</option>
-                                                <option value="septiembre">Septiembre</option>
-                                                <option value="octubre">Octubre</option>
-                                                <option value="noviembre">Noviembre</option>
-                                                <option value="diciembre">Diciembre</option>
-                                            </select>
-                                            <input type="number" placeholder="Año" class="input input-flex">
-                                        </div>
-                                    </label>
-                               
-                               
-                                    <label for="" class="label">
-                                        Fecha de fin
-                                        <div class="flex">
-                                            <select name="select" class="input">
-                                                <option value="Mes" selected>Mes</option>
-                                                <option value="enero">Enero</option>
-                                                <option value="febrero">Febrero</option>
-                                                <option value="marzo">Marzo</option>
-                                                <option value="abril">Abril</option>
-                                                <option value="mayo">Mayo</option>
-                                                <option value="junio">Junio</option>
-                                                <option value="julio">Julio</option>
-                                                <option value="agosto">Agosto</option>
-                                                <option value="septiembre">Septiembre</option>
-                                                <option value="octubre">Octubre</option>
-                                                <option value="noviembre">Noviembre</option>
-                                                <option value="diciembre">Diciembre</option>
-                                            </select>
-                                            <input type="number" placeholder="Año" class="input input-flex">
-                                        </div>
-                                    </label>
-                                </div>
                            
                             <label for="" class="label">
                                 Descripcion
@@ -148,70 +94,9 @@
                                 <input type="text" class="input" data-name="empresa">
                             </label>
     
-                            <div class="rows">
-                                <label for="" class="label">
-                                    Fecha de inicio
-                                    <div class="flex">
-                                        <select name="select" class="input">
-                                            <option value="Mes" selected>Mes</option>
-                                            <option value="enero">Enero</option>
-                                            <option value="febrero">Febrero</option>
-                                            <option value="marzo">Marzo</option>
-                                            <option value="abril">Abril</option>
-                                            <option value="mayo">Mayo</option>
-                                            <option value="junio">Junio</option>
-                                            <option value="julio">Julio</option>
-                                            <option value="agosto">Agosto</option>
-                                            <option value="septiembre">Septiembre</option>
-                                            <option value="octubre">Octubre</option>
-                                            <option value="noviembre">Noviembre</option>
-                                            <option value="diciembre">Diciembre</option>
-                                        </select>
-                                        <input type="number" placeholder="Año" class="input input-flex">
-                                    </div>
-                                </label>
-                                <label for="" class="label">
-                                    Fecha de fin
-                                    <div class="flex">
-                                        <select name="select" class="input">
-                                            <option value="Mes" selected>Mes</option>
-                                            <option value="enero">Enero</option>
-                                            <option value="febrero">Febrero</option>
-                                            <option value="marzo">Marzo</option>
-                                            <option value="abril">Abril</option>
-                                            <option value="mayo">Mayo</option>
-                                            <option value="junio">Junio</option>
-                                            <option value="julio">Julio</option>
-                                            <option value="agosto">Agosto</option>
-                                            <option value="septiembre">Septiembre</option>
-                                            <option value="octubre">Octubre</option>
-                                            <option value="noviembre">Noviembre</option>
-                                            <option value="diciembre">Diciembre</option>
-                                        </select>
-                                        <input type="number" placeholder="Año" class="input input-flex">
-                                    </div>
-                                </label>
-                            </div>
                             <label for="" class="label">
                                 Descripcion
                                 <textarea name="" id="" cols="30" rows="10" class="input" data-name="experiencia"></textarea>
-                            </label>
-                            <div class="containerBtns">
-                                <button class="btn-form" type="button">Borrar</button>
-                                <button class="btn-form btn-saved" type="button">Guardar</button>
-                            </div>
-                        </form>
-                   </li>
-                   <li class="skills__item activeSkill">
-                        <div class="skills__header">
-                            <h2 class="skills__title">Habilidad</h2>
-                            <button class="btn-desc">
-                                <img src="/images/list.png" class="btn-icon" width="30px">
-                            </button>
-                        </div>
-                        <form action="" class="skills__form ">
-                            <label for="" class="label">Habilidad
-                                <input type="text" class="input">
                             </label>
                             <div class="containerBtns">
                                 <button class="btn-form" type="button">Borrar</button>
@@ -229,8 +114,8 @@
                         <form action="" class="skills__form ">
                                 <label for="" class="label">Idiomas
                                     <div class="flex">
-                                        <input type="text" class="input input-flex">
-                                    <select name="select" class="input"  id="">
+                                        <input type="text" class="input input-flex" data-name="idioma">
+                                    <select name="select" class="input"  id="" data-name="level-language">
                                         <option value="nivel">Nivel</option>
                                         <option value="principiante">Principiante</option>
                                         <option value="intermedio">Intermedio</option>
@@ -244,19 +129,7 @@
                             </div>
                         </form>
                    </li>
-                   <li class="skills__item activeSkill">
-                        <div class="skills__header">
-                            <h2 class="skills__title">Objetivo profesional</h2>
-                            <button class="btn-desc">
-                                <img src="/images/list.png" class="btn-icon" width="30px">
-                            </button>
-                        </div>
-                        <form action="" class="skills__form ">
-                            <label for="" class="label">Perfil
-                                <textarea name="" id="" cols="30" rows="10" class="input"></textarea>
-                            </label>
-                        </form>
-                   </li>
+                  
                 </ul>
             </div>
         </main>
@@ -326,7 +199,7 @@
                             <ul>
                                 <li>
                                     <span class="languages__title" data-name="idioma">Ingles</span>
-                                    <span>Nivel Alto</span>
+                                    <span data-name="level-language">Nivel Alto</span>
                                 </li>
                             </ul>
                         </div>
