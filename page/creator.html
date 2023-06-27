@@ -33,13 +33,13 @@
                                     <input type="text" name="nombre" data-name="nombre" class="input">
                                 </label>
                             <label class="label">Correo electronico
-                                <input type="email" class="input">
+                                <input type="email" data-name="correo" class="input">
                             </label>
                             <label class="label">Telefono
-                                <input type="tel" class="input">
+                                <input type="tel" class="input" data-name="telefono">
                             </label>
                             <label class="label">direccion
-                                <input type="text" class="input">
+                                <input type="text" class="input" data-name="direccion">
                             </label>
                             
                             <div class="rows">
@@ -62,13 +62,13 @@
                         <form action="" class="skills__form ">
                             <label for="" class="label">
                                 Formacion
-                                <input type="" class="input">
+                                <input type="" class="input" data-name="formacion">
                             </label>
                     
                                 <div class="rows">
                                     <label for="" class="label">
                                         Institucion
-                                        <input type="text" class="input">
+                                        <input type="text" class="input" data-name="instituto">
                                     </label>
                                     <label for="" class="label">
                                         Localidad
@@ -142,10 +142,10 @@
                         </div>
                         <form action="" class="skills__form ">
                             <label for="" class="label">Puesto
-                                <input type="text" class="input">
+                                <input type="text" class="input" data-name="puesto">
                             </label>
                             <label for="" class="label">Empresa
-                                <input type="text" class="input">
+                                <input type="text" class="input" data-name="empresa">
                             </label>
     
                             <div class="rows">
@@ -194,7 +194,7 @@
                             </div>
                             <label for="" class="label">
                                 Descripcion
-                                <textarea name="" id="" cols="30" rows="10" class="input"></textarea>
+                                <textarea name="" id="" cols="30" rows="10" class="input" data-name="experiencia"></textarea>
                             </label>
                             <div class="containerBtns">
                                 <button class="btn-form" type="button">Borrar</button>
@@ -260,6 +260,9 @@
                 </ul>
             </div>
         </main>
+
+
+        
         <div class="containerCv">
             <header class="headerCv">
                 <div class="imgCv">
@@ -275,19 +278,19 @@
                             <div class="icon">
                                 <img src="https://cdn-icons-png.flaticon.com/128/455/455705.png" width="30px" alt="telefono">
                             </div>
-                            <span>888-888-8888</span>
+                            <span data-name="telefono">888-888-8888</span>
                         </li>
                         <li class="related__item">
                             <div class="icon">
                                 <img src="https://cdn-icons-png.flaticon.com/128/4314/4314565.png" alt="correo" width="30px">
                             </div>
-                            <span>Macarones5@gmail.com</span>
+                            <span data-name="correo">Macarones5@gmail.com</span>
                         </li>
                         <li class="related__item">
                             <div class="icon">
                                 <img src="https://cdn-icons-png.flaticon.com/128/3203/3203071.png" alt="direccion" width="30px">
                             </div>
-                            <span>Calle Falsa 123</span>
+                            <span data-name="direccion">Calle Falsa 123</span>
                         </li>
                     </ul>
                 </aside>
@@ -297,11 +300,11 @@
     
                         <div class="section__container">
                             <div class="section__header">
-                                <h3>Creador de contenido</h3>
-                                <span>Empresa falsa 123</span>
+                                <h3 data-name="puesto">Creador de contenido</h3>
+                                <span data-name="empresa">Empresa falsa 123</span>
                             </div>
                             <ul class="section__list">
-                                <li>- Diseño web</li>
+                                <li data-name="experiencia">- Diseño web</li>
                                 <li>- Diseño de la app</li>
                             </ul>
                         </div>
@@ -322,8 +325,8 @@
                         <h2 class="section__title">Datos Academicos</h2>
                         <div class="section__container">
                             <div class="section__header">
-                                <h3>Universidad de la Cosa</h3>
-                                <span>Estuido en el Arte de la Nada</span>
+                                <h3 data-name="instituto">Universidad de la Cosa</h3>
+                                <span data-name="formacion">Estuido en el Arte de la Nada</span>
                             </div>
     
                             <div class="section__header">
@@ -350,7 +353,7 @@
                                     <span>Nativo</span>
                                 </li>
                                 <li>
-                                    <span class="languages__title">Ingles</span>
+                                    <span class="languages__title" data-name="idioma">Ingles</span>
                                     <span>Nivel Alto</span>
                                 </li>
                             </ul>
