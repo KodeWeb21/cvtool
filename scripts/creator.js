@@ -1,10 +1,30 @@
 const skills = document.querySelector(".skills");
-
+let n = 0;
 const addNewSection = target =>{
     const skillsForm =  target.closest(".skills__form");
     const skillsInput = skillsForm.cloneNode(true);
     const skillItem = skillsForm.closest(".skills__item")
+    
+    const skillsChilds = Array.from(skillsInput.querySelectorAll("[data-name]"));
+    skillsChilds.map(childs =>{
+        childs.value = "";
+        childs.dataset.name = childs.dataset.name + n;
+    })
     skillItem.appendChild(skillsInput);
+
+    const dataBtnAttribute = target.dataset.section;
+    if(dataBtnAttribute){
+        const skillsDataCV = document.querySelector(`.containerCv [data-section="${dataBtnAttribute}"] `);
+        const skillContainer = skillsDataCV.closest(".section");
+        const skillDataClone = skillsDataCV.cloneNode(true);
+        const editsCV = Array.from(skillDataClone.querySelectorAll("[data-name]"));
+        editsCV.map(edit =>{
+            edit.textContent = "";
+            edit.dataset.name = edit.dataset.name + n;
+        })
+        skillContainer.appendChild(skillDataClone);
+        n++;
+    }
 }
 
 const ChangeData = (e) =>{
@@ -29,6 +49,7 @@ const ChangeData = (e) =>{
     if(target.matches(".btn-saved")){
         addNewSection(target);
     }
+
 }
 
 skills.addEventListener("click",ChangeData);
