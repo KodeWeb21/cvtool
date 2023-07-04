@@ -1,5 +1,13 @@
 const skills = document.querySelector(".skills");
-skills.addEventListener("click",(e)=>{
+
+const addNewSection = target =>{
+    const skillsForm =  target.closest(".skills__form");
+    const skillsInput = skillsForm.cloneNode(true);
+    const skillItem = skillsForm.closest(".skills__item")
+    skillItem.appendChild(skillsInput);
+}
+
+const ChangeData = (e) =>{
     const target = e.target;
     if(target.matches(".btn-desc") || target.matches(".btn-desc *")){
         const skillsItem = target.closest(".skills__item");
@@ -17,4 +25,11 @@ skills.addEventListener("click",(e)=>{
         })
 
     }
-})
+
+    if(target.matches(".btn-saved")){
+        addNewSection(target);
+    }
+}
+
+skills.addEventListener("click",ChangeData);
+skills.addEventListener('input',ChangeData);
