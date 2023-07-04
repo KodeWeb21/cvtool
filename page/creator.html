@@ -69,7 +69,7 @@
                                 </div>
                             <div class="containerBtns">
                                 <button class="btn-form" type="button">Borrar</button>
-                                <button class="btn-form btn-saved" type="button">Guardar</button>
+                                <button class="btn-form btn-saved" type="button" data-section="formacion">Guardar</button>
                             </div>
                         </form>
                    </li>
@@ -94,7 +94,7 @@
                             </label>
                             <div class="containerBtns">
                                 <button class="btn-form" type="button">Borrar</button>
-                                <button class="btn-form btn-saved" type="button">Guardar</button>
+                                <button class="btn-form btn-saved" type="button" data-section="experiencia">Guardar</button>
                             </div>
                         </form>
                    </li>
@@ -119,7 +119,7 @@
                                 </label>
                             <div class="containerBtns">
                                 <button class="btn-form" type="button">Borrar</button>
-                                <button class="btn-form btn-saved" type="button">Guardar</button>
+                                <button class="btn-form btn-saved" type="button" data-section="idioma">Guardar</button>
                             </div>
                         </form>
                    </li>
@@ -165,7 +165,7 @@
                     <section class="section">
                         <h2 class="section__title">Experiencia Laboral</h2>
     
-                        <div class="section__container">
+                        <div class="section__container" data-section="experiencia">
                             <div class="section__header">
                                 <h3 data-name="puesto">Creador de contenido</h3>
                                 <span data-name="empresa">Empresa falsa 123</span>
@@ -178,7 +178,7 @@
     
                     <section class="section">
                         <h2 class="section__title">Datos Academicos</h2>
-                        <div class="section__container">
+                        <div class="section__container" data-section="formacion">
                             <div class="section__header">
                                 <h3 data-name="instituto">Universidad de la Cosa</h3>
                                 <span data-name="formacion">Estuido en el Arte de la Nada</span>
@@ -189,8 +189,8 @@
                     <footer class="footerCv">
                         <div class="languages">
                             <h4>Idiomas</h4>
-                            <ul>
-                                <li>
+                            <ul class="section">
+                                <li  data-section="idioma">
                                     <span class="languages__title" data-name="idioma">Ingles</span>
                                     <span data-name="level-language">Nivel Alto</span>
                                 </li>
