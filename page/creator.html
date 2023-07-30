@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.debug.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/editor.css">
     <link rel="stylesheet" href="/styles/creator.css">
     <title>CVtool - Crear CV</title>
 </head>
@@ -15,7 +18,7 @@
             </a>
             <span>Documento sin titulo</span>
         </div>
-        <img src="/images/download.png" width="30px">
+        <img src="/images/download.png" class="btn-pdf" width="30px">
     </header>
     <div class="columns">
         <main class="main">
@@ -29,18 +32,45 @@
                             </button>
                         </div>
                         <form class="skills__form ">
+                            <div class="labels">
+                                <div class="photo">
+                                    <span>Foto</span>
+                                    <div class="photo-icon">
+                                        <label for="photoInput" class="photo-label">
+                                            <img src="https://static-00.iconduck.com/assets.00/image-polaroid-user-icon-512x512-eta4e07f.png" alt="Imagen de usuario" width="30px">
+                                        </label>
+                                        <input type="file" name="photo"  id="photoInput" accept="image/png, image/jpeg" hidden>
+                                    </div>
+                                </div>
+                            <div class="lf-content">
                                 <label class="label">Nombre completo
                                     <input type="text" name="nombre" data-name="nombre" class="input">
                                 </label>
-                            <label class="label">Correo electronico
-                                <input type="email" data-name="correo" class="input">
-                            </label>
+                                <label class="label">Correo electronico
+                                    <input type="email" data-name="correo" class="input">
+                                </label>
+                            </div>
+                            </div>
                             <label class="label">Telefono
                                 <input type="tel" class="input" data-name="telefono">
                             </label>
-                            <label class="label">direccion
+                            <label class="label">Direccion
                                 <input type="text" class="input" data-name="direccion">
                             </label>
+                            
+                        </form>
+                   </li>
+                   <li class="skills__item activeSkill">
+                        <div class="skills__header">
+                            <h2 class="skills__title">Objetivo Profesional</h2>
+                            <button class="btn-desc">
+                                <img src="/images/list.png" class="btn-icon" width="30px">
+                            </button>
+                        </div>
+                        <form class="skills__form">
+                            <label for="" class="label">Perfil
+                                <textarea name="" id="" cols="30" rows="10" data-name="perfil"></textarea>
+                            </label> 
                             
                         </form>
                    </li>
@@ -57,19 +87,19 @@
                                 <input type="" class="input" data-name="formacion">
                             </label>
                     
-                                <div class="rows">
+                                <div>
                                     <label for="" class="label">
                                         Institucion
                                         <input type="text" class="input" data-name="instituto">
                                     </label>
-                                    <label for="" class="label">
-                                        Localidad
-                                        <input type="text" class="input">
-                                    </label>
                                 </div>
+                                <label for="" class="label">
+                                    Descripcion
+                                    <textarea name="" id="" cols="30" rows="10" class="input" data-name="educacion"></textarea>
+                                </label>
                             <div class="containerBtns">
-                                <button class="btn-form" type="button">Borrar</button>
-                                <button class="btn-form btn-saved" type="button" data-section="formacion">Guardar</button>
+                                <button class="btn-form hidden btn-deleted" type="button">Borrar</button>
+                                <button class="btn-form btn-saved" type="button" data-section="formacion">Agregar</button>
                             </div>
                         </form>
                    </li>
@@ -93,113 +123,100 @@
                                 <textarea name="" id="" cols="30" rows="10" class="input" data-name="experiencia"></textarea>
                             </label>
                             <div class="containerBtns">
-                                <button class="btn-form" type="button">Borrar</button>
-                                <button class="btn-form btn-saved" type="button" data-section="experiencia">Guardar</button>
+                                <button class="btn-form hidden btn-deleted" type="button" >Borrar</button>
+                                <button class="btn-form btn-saved" type="button" data-section="experiencia">Agregar</button>
                             </div>
                         </form>
                    </li>
-                   <li class="skills__item activeSkill">
-                        <div class="skills__header">
-                            <h2 class="skills__title">Idiomas</h2>
-                            <button class="btn-desc">
-                                <img src="/images/list.png" class="btn-icon" width="30px">
-                            </button>
-                        </div>
-                        <form action="" class="skills__form ">
-                                <label for="" class="label">Idiomas
-                                    <div class="flex">
-                                        <input type="text" class="input input-flex" data-name="idioma">
-                                    <select name="select" class="input"  id="" data-name="level-language">
-                                        <option value="nivel">Nivel</option>
-                                        <option value="principiante">Principiante</option>
-                                        <option value="intermedio">Intermedio</option>
-                                        <option value="avanzado">Avanzado</option>
-                                    </select>
-                                    </div>
-                                </label>
-                            <div class="containerBtns">
-                                <button class="btn-form" type="button">Borrar</button>
-                                <button class="btn-form btn-saved" type="button" data-section="idioma">Guardar</button>
-                            </div>
-                        </form>
-                   </li>
-                  
                 </ul>
             </div>
         </main>
 
-
-        
         <div class="containerCv">
-            <header class="headerCv">
-                <div class="imgCv">
-                    <img src="https://images.pexels.com/photos/2173872/pexels-photo-2173872.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Foto Frontal">
-                </div>
-                <h1 class="nameCv" data-name="nombre">Rodolfo Gonzales Moca</h1>
-            </header>
-            <div class="sections">
-                <aside class="related">
-                    <h3>Contacto</h3>
-                    <ul class="related__list">
-                        <li class="related__item">
-                            <div class="icon">
-                                <img src="https://cdn-icons-png.flaticon.com/128/455/455705.png" width="30px" alt="telefono">
-                            </div>
-                            <span data-name="telefono">888-888-8888</span>
-                        </li>
-                        <li class="related__item">
-                            <div class="icon">
-                                <img src="https://cdn-icons-png.flaticon.com/128/4314/4314565.png" alt="correo" width="30px">
-                            </div>
-                            <span data-name="correo">Macarones5@gmail.com</span>
-                        </li>
-                        <li class="related__item">
-                            <div class="icon">
-                                <img src="https://cdn-icons-png.flaticon.com/128/3203/3203071.png" alt="direccion" width="30px">
-                            </div>
-                            <span data-name="direccion">Calle Falsa 123</span>
-                        </li>
-                    </ul>
-                </aside>
-                <main class="mainCv">
-                    <section class="section">
-                        <h2 class="section__title">Experiencia Laboral</h2>
-    
-                        <div class="section__container" data-section="experiencia">
-                            <div class="section__header">
-                                <h3 data-name="puesto">Creador de contenido</h3>
-                                <span data-name="empresa">Empresa falsa 123</span>
-                            </div>
-                            <ul class="section__list">
-                                <li data-name="experiencia">- Diseño web</li>
-                            </ul>
-                        </div>
-                    </section>
-    
-                    <section class="section">
-                        <h2 class="section__title">Datos Academicos</h2>
-                        <div class="section__container" data-section="formacion">
-                            <div class="section__header">
-                                <h3 data-name="instituto">Universidad de la Cosa</h3>
-                                <span data-name="formacion">Estuido en el Arte de la Nada</span>
-                            </div>
-                        </div>
-                    </section>
-    
-                    <footer class="footerCv">
-                        <div class="languages">
-                            <h4>Idiomas</h4>
-                            <ul class="section">
-                                <li  data-section="idioma">
-                                    <span class="languages__title" data-name="idioma">Ingles</span>
-                                    <span data-name="level-language">Nivel Alto</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </footer>
-                </main>
+            <div class="containerCV__lf">
+                <img src="https://images.pexels.com/photos/17481292/pexels-photo-17481292.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" class="iconImage" id="profile"></img>
+                <h3 class="center related__title">Contacto</h3>
+                <ul class="contacs">
+                    <li class="contacs__item">
+                        <img src="https://cdn-icons-png.flaticon.com/512/455/455705.png" width="20px" alt="telefono">
+                        <span data-name="telefono" class="break-all">809-444-44444</span>
+                    </li>
+                    <li class="contacs__item">
+                        <img src="https://cdn-icons-png.flaticon.com/512/4314/4314565.png" width="20px" alt="correo">
+                        <span data-name="correo" class="break-all">Moreno@gmail.com</span>
+                    </li>
+                    <li class="contacs__item">
+                        <img src="https://cdn-icons-png.flaticon.com/512/181/181508.png" width="20px" alt="direccion">
+                        <span class="lftext break-all" data-name="direccion">Calle 123 esquina Mira</span>
+                    </li>
+                </ul>
             </div>
-       </div>
+           <div class="containerCV__rg">
+                <header class="headerCv">
+                    <h1 data-name="nombre" class="break-all">Manuel</h1>  
+                </header>
+                <div class="sections">
+                    <section class="section">
+                        <div class="section__title">
+                            <div class="section__left">
+                                <div class="section__icon">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/456/456212.png" width="20px" alt="perfil">
+                                </div>
+                                <h2 class="section__sec">Perfil</h2>
+                            </div>
+                            <div class="line"></div>
+                        </div>
+                        <div class="section__container">
+                            <p data-name="perfil" class="section__list break-all">El cliente es muy importante, el cliente sera seguido por el cliente.</p>
+                        </div>
+                    </section>
+                    <section class="section">
+                        <div class="section__title">
+                            <div class="section__left">
+                                <div class="section__icon">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/6964/6964169.png" width="20px" alt="experiencia">
+                                </div>
+                                <h2 class="section__sec">Experiencia laboral</h2>
+                            </div>
+                            <div class="line"></div>
+                        </div>
+                        <ul class="section__container" data-section="experiencia">
+                            <div class="section__header">
+                                <li class="company break-all" data-name="empresa">Nombre de la empresa</li>
+                                <div class="ages">
+                                   <span data-name="puesto" class="break-all"></span>
+                                </div>
+                            </div>
+                            <p class="section__list break-all" data-name="experiencia">
+                                El cliente es muy importante, el cliente sera seguido por el cliente.
+                            </p>
+                        </ul>
+                    </section>  
+                    <section class="section">
+                        <div class="section__title">
+                            <div class="section__left">
+                                <div class="section__icon">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/1940/1940611.png" width="20px" alt="educacion">
+                                </div>
+                                <h2 class="section__sec">Educacion</h2>
+                            </div>
+                            <div class="line"></div>
+                        </div>
+                        <ul class="section__container" data-section="formacion">
+                            <div class="sectioon__header">
+                                <li class="school break-all" data-name="instituto">Nombre de la escuela</li>
+                                <div class="ages">
+                                    <span data-name="formacion" class="break-all"></span>
+                                </div>
+                            </div>
+                            <p class="section__list lftext break-all" data-name="educacion">
+                                El cliente es muy importante, el cliente sera seguido por el cliente.
+                            </p>
+                        </ul>
+                    </section>
+                </div>
+           </div>
+        </div>
     </div>
     <script src="/scripts/creator.js"></script>
 </body>

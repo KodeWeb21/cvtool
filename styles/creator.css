@@ -1,213 +1,145 @@
-:root{
-    --header-bg: #00B4D8;
-    --color: white;
-    --section-bg: #EDEDE9;
-}
 
 
-body{
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.header{
-    background-color: var(--section-bg);
-    display: flex;
-    justify-content: space-between;
-}
-
-.columns{
-    display: flex;
-}
-
-.skills,
-.header,
+/**** CV ESTILOS ***/
 .containerCv{
-    padding: 10px 15px;
-}
-
-.skills,
-.containerCv{
-    height: 90vh;
+    display: inline-flex;
+    gap: 20px;
     overflow-y: scroll;
+    width: 800px;
 }
 
-.left{
+.iconImage{
+    width: 150px;
+    border-radius: 50%;
+    height: 150px;
+    border: 1px solid;
+    object-fit: cover;
+}
+
+.section__left{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.line{
+    width: 80%;
+    height: 3px;
+    background-color: #7889ff; /* Otra opcion de color #7889ff*/
+}
+
+.section__title{
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.btn-home{
-    display: grid;
-}
-
-
-
-.skills__list{
+ul{
     padding: 0;
-    list-style: none;
 }
 
-.skills__header{
+.center{
+    text-align: center
+}
+
+.contacs__item{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin-bottom: 10px;
+    gap: 5px;
 }
 
-.skills__title{
-    margin: 0;
-    font-size: 1.2rem;
+.contacs{
+    width: 70%;
+    margin: 0 auto;
+    list-style: none;
+    color: white;
 }
 
-.skills__item{
-    border: 1px solid #3333;
-    border-radius: 3px;
-    padding: .4rem;
-    margin: 15px 0;
-}
-
-.btn-desc{
-    background-color: inherit;
-    border: 0;
-}
-
-.label{
-    display: flex;
-    flex-direction: column;
+.contacs__item{
     margin: 10px 0;
-    gap: 3px;
 }
 
-.input{
-    padding: .5rem .2rem;
+.containerCV__lf{
+    min-width: 300px;
+    max-width: 300px;
+    text-align: center;
+    background-color: #7889ff;
 }
 
-.containerBtns{
-    text-align: right;
-}
-
-.btn-form{
-    padding: .5rem .8rem;
-    border: 0;
-    border-radius: 3px;
-}
-
-.btn-saved{
-    background-color: var(--header-bg);
+.related__title{
     color: white;
     font-weight: bold;
 }
 
-.flex{
-    display: flex;
-    gap: 5px;
+.containerCV__lf,
+.containerCV__rg{
+    padding: 9px;
 }
 
-.input-flex{
-    flex-grow: 1;
+.containerCV__rg{
+    overflow: auto;
 }
 
-.hidden{
-    display: none;
+.section__sec{
+    white-space: nowrap;
 }
-
-.btn-icon{
-    transition: transform .3s ease;
-}
-
-.activeSkill .btn-icon{
-    transform: rotate(180deg);
-}
-
-/**** CV ESTILOS ***/
 
 .headerCv{
-    display: flex;
-    align-items: flex-end;
-    gap: 15px;
+    position: relative;
 }
 
-.containerCv{
-    flex-grow: 1;
-    max-width: 880px;
-    margin: 0 auto;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    display: none;
+.img{
+    height: 387px;
+    position: absolute;
+    z-index: -1;
+    top: -61px;
+    width: 114%;
+    left: -30px;
 }
 
-.imgCv{
-    width: 250px;
-    background-color: #007D94;;
-    line-height: 0;
+.lftext{
+  text-align: left;
+  word-break: break-word;
 }
 
-.imgCv img{
-    max-width: 100%;
-}
-
-.name{
-    margin: 0;
-    font-size: 60px;
-}
-
-.sections{
-    display: flex;
-}
-
-.related{
-    min-width: 250px;
-}
-
-.related__list{
-    list-style: none;
-    padding: 0;
-}
-
-.icon{
-    width: 30px;
-    height: 30px;
-}
-
-.related__item{
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    margin: 10px 0;
-}
-
-.section__header h3{
-    margin: 5px 0;
-}
-
-.footerCv{
-    display: flex;
-    gap: 15px;
-}
-
-.languages ul,
-.more ul,
-.section__list{
-    list-style: none;
-    padding: 0;
-}
-.languages li{
-    margin: 10px 0;
-}
-
-.languages span{
-    display: block;
-}
-
-.languages span:nth-child(1){
+.ages{
     font-weight: bold;
 }
-
 
 .main{
     flex-grow: 1;
 }
+
+.labels{
+    display: flex;
+    gap: 10px;
+    align-items: baseline;
+}
+
+.lf-content{
+    width: 100%;
+}
+
+.photo-icon{
+    width: 150px;
+    height: 150px;
+    border: 1px solid var(--border-color);
+    background-color: var(--section-bg);
+}
+
+.photo-label{
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    display: grid;
+    place-content: center;
+}
+
+.break-all{
+    word-break: break-all;
+}
+
 
 @media screen and (min-width:640px){
     .rows{
@@ -219,8 +151,8 @@ body{
   
 }
 
-@media screen and (min-width:1024px){
+@media screen and (max-width:1440px){
     .containerCv{
-        display: block;
+        display: none;
     }
 }
