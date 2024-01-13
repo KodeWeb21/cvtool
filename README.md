@@ -1,6 +1,6 @@
-# ¡Mensaje Importante!
+> [!IMPORTANT]
+> Este proyecto está en estado alpha y todavía se encuentra en desarrollo. Puede contener errores y características incompletas.
 
-**Este proyecto está en estado alpha y todavía se encuentra en desarrollo. Puede contener errores y características incompletas.**
 
 # CVtool
 
